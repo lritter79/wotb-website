@@ -1,10 +1,12 @@
 <script lang="ts">
+  import type { IconDefinition } from "@fortawesome/free-brands-svg-icons";
   import { onMount } from "svelte";
   //   import { copyToClipboard } from "your-copy-clipboard-library"; // Replace with your preferred library or implementation
+  import Fa from "svelte-fa";
 
   export let link: string;
   export let linkText: string;
-  export let icon: any; // Replace 'any' with the actual type of your icon component
+  export let icon: IconDefinition; // Replace 'any' with the actual type of your icon component
 
   let isCopied = false;
 
@@ -30,8 +32,7 @@
       class="link"
     >
       <div class="icon">
-        <svelte:component this={icon} />
-        <!-- {#if icon}{icon}{/if} -->
+        <Fa {icon} />
       </div>
       {linkText}
     </a>

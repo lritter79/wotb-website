@@ -1,14 +1,17 @@
 <script lang="ts">
   import LinkBox from "./lib/LinkBox.svelte";
-  import SpotifyIcon from "./lib/icons/SpotifyIcon.svelte";
   import socials from "./data/socialLinks.json";
+  import {
+    faSpotify,
+    type IconDefinition,
+  } from "@fortawesome/free-brands-svg-icons";
   import type { SvelteComponent } from "svelte";
   interface ComponentDictionary {
-    [key: number]: typeof SvelteComponent;
+    [key: number]: IconDefinition;
     // Add more entries as needed
   }
   let componentDictionary: ComponentDictionary = {
-    0: SpotifyIcon,
+    0: faSpotify,
     // Add more entries as needed
   };
 </script>
@@ -23,9 +26,7 @@
     <LinkBox
       link={social.link}
       linkText={social.linkText}
-      icon={Number(social.id) in componentDictionary
-        ? componentDictionary[Number(social.id)]
-        : null}
+      icon={componentDictionary[Number(social.id)]}
     />
   {/each}
 </main>
