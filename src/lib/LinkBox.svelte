@@ -23,18 +23,18 @@
   };
 </script>
 
-<div class="link-container w-96 lg:min-w-96">
+<div class="link-container w-64 md:w-2/3 lg:w-2/3 xl:w-2/3">
   <div class="link-container-black p-0.5">
     <a
       href={link}
       target="_blank"
       rel="noopener noreferrer"
-      class="link"
+      class="link text-lg md:text-xl lg:text-xl"
     >
       <div class="icon">
         <Fa {icon} />
       </div>
-      {linkText}
+      <div class="link-text">{linkText}</div>
     </a>
     <button on:click={handleCopy} class="copy-button">
       <!-- <div class="copy-icon"> {/* Add your copy icon here */}</div> -->
@@ -47,8 +47,9 @@
   .link-container {
     position: relative;
     display: inline-block;
-    overflow: hidden;
     transition: transform 0.3s ease;
+    background-color: black;
+    border: 1px solid white;
   }
 
   .link {
@@ -56,15 +57,26 @@
     align-items: center;
     text-decoration: none;
     padding: 10px;
-    background-color: black;
     color: white;
-    border: 1px solid white;
+  }
+
+  .icon {
+    position: absolute;
+    margin-right: 10px;
+  }
+
+  .link-text {
+    flex-grow: 1; /* Takes up remaining space, centering the text */
+    text-align: center;
   }
 
   .link-container:hover {
     transform: scale(1.05);
   }
 
+  .link-container:focus {
+    transform: scale(1.05);
+  }
   .icon {
     margin-right: 10px;
   }
