@@ -21,7 +21,7 @@
 
 <style>
   .button {
-    @apply bg-white text-black border border-solid border-black px-4 py-2 rounded shadow-md;
+    @apply bg-white text-black border border-solid border-black px-4 py-2 rounded shadow-md flex justify-center items-center;
     transition: background-color 0.3s;
   }
 

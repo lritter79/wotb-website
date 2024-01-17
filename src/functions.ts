@@ -43,7 +43,8 @@ export function getEventConfig(show: Show): ATCBActionEventConfig {
   const endDate = endDateObject.format("YYYY-MM-DD");
   const startTime = startDateObject.format("HH:mm");
   const endTime = endDateObject.format("HH:mm");
-
+  let location = show.venueName;
+  if (show.ticketLink) location = show.ticketLink;
   const config: ATCBActionEventConfig = {
     name,
     description: name,
@@ -51,7 +52,9 @@ export function getEventConfig(show: Show): ATCBActionEventConfig {
     endDate,
     startTime,
     endTime,
+    location,
     options: ["Google", "iCal"],
+    timeZone: show.timezone,
   };
 
   return config;
