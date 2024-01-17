@@ -40,9 +40,23 @@
         <Fa icon={faDirections} />
       </a>
     </div>
-    <h2 class="text-md sm:text-xl">
-      {show.venueName}{" @ "}{extractTimeFromISO(show.entryTime)}
-    </h2>
+    {#if show?.ticketLink}
+      <a
+        href={show.ticketLink}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="button"
+      >
+        <h2 class="text-md sm:text-xl">
+          {show.venueName}{" @ "}{extractTimeFromISO(show.entryTime)}
+        </h2></a
+      >
+    {:else}
+      <h2 class="text-md sm:text-xl">
+        {show.venueName}{" @ "}{extractTimeFromISO(show.entryTime)}
+      </h2>
+    {/if}
+
     <h4>
       {#if show.otherBands && show.otherBands.length > 0}
         w/ {show.otherBands.join(", ")}
@@ -50,7 +64,7 @@
     </h4>
   </div>
   <div class="button-container flex flex-col justify-around">
-    {#if show.ticketLink}
+    {#if show?.ticketLink}
       <LinkButton link="https://www.google.com" linkText="Tickets" />
     {/if}
     <Button
