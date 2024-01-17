@@ -13,11 +13,12 @@ interface Address {
   state: string;
 }
 
-interface Show {
+export interface Show {
   venueName: string;
   address?: Address;
   otherBands?: string[];
   entryTime?: Date;
   startTime: Date;
   ticketLink?: string;
+  rvspLink?: string;
 }

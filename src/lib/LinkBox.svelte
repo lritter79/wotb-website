@@ -3,7 +3,6 @@
   import { onMount } from "svelte";
   //   import { copyToClipboard } from "your-copy-clipboard-library"; // Replace with your preferred library or implementation
   import Fa from "svelte-fa";
-
   export let link: string;
   export let linkText: string;
   export let icon: IconDefinition; // Replace 'any' with the actual type of your icon component
