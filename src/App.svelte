@@ -3,7 +3,8 @@
   import socials from "./data/socialLinks.json";
   import musicServices from "./data/musicLinks.json";
   import Stack from "./lib/Stack.svelte";
-
+  import Show from "./lib/Show.svelte";
+  import shows from "./data/shows.json";
   import {
     faSpotify,
     type IconDefinition,
@@ -38,6 +39,11 @@
   <h1 class="text-5xl">Wake of The Blade</h1>
   <br />
   <h2 class="text-4xl">Shows</h2>
+  <Stack spacing={1}>
+    {#each shows as show (show)}
+      <Show {show} />
+    {/each}</Stack
+  >
   <h2 class="text-4xl">Music</h2>
   <Stack spacing={1}>
     {#each musicServices as musicService (musicService)}
