@@ -9,21 +9,28 @@
     type IconDefinition,
     faBandcamp,
     faApple,
+    faFacebook,
+    faInstagram,
+    faYoutube,
+    faTiktok,
+    faCreativeCommonsZero,
   } from "@fortawesome/free-brands-svg-icons";
   interface ComponentDictionary {
     [key: number]: IconDefinition;
     // Add more entries as needed
   }
   let socialsIconsDictionary: ComponentDictionary = {
-    0: faSpotify,
-    // Add more entries as needed
+    0: faFacebook,
+    1: faInstagram,
+    2: faYoutube,
+    3: faTiktok,
+    4: faCreativeCommonsZero,
   };
 
   let musicIconsDictionary: ComponentDictionary = {
     0: faSpotify,
     1: faBandcamp,
     2: faApple,
-    // Add more entries as needed
   };
 </script>
 

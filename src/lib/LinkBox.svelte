@@ -29,7 +29,7 @@
       href={link}
       target="_blank"
       rel="noopener noreferrer"
-      class="link text-lg md:text-xl lg:text-xl"
+      class="link text-xl md:text-xl lg:text-xl"
     >
       <div class="icon">
         <Fa {icon} />
@@ -62,7 +62,6 @@
 
   .icon {
     position: absolute;
-    margin-right: 10px;
   }
 
   .link-text {
