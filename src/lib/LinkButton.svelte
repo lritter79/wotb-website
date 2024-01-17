@@ -1,6 +1,9 @@
 <script>
   export let link = "#";
   export let linkText = "Click me";
+  export let onClick = () => {
+    return;
+  };
 </script>
 
 <a
@@ -8,6 +11,7 @@
   target="_blank"
   rel="noopener noreferrer"
   class="button"
+  on:click={onClick}
 >
   {linkText}
 </a>

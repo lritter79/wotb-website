@@ -13,12 +13,14 @@ interface Address {
   state: string;
 }
 
-export interface Show {
+export type Show = {
   venueName: string;
   address?: Address;
   otherBands?: string[];
-  entryTime?: Date;
-  startTime: Date;
+  entryTime?: string;
+  startTime: string;
+  endTime?: string;
+  timezone: string;
   ticketLink?: string;
   rvspLink?: string;
-}
+};

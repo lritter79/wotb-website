@@ -1,7 +1,7 @@
 <script lang="ts">
   import LinkBox from "./lib/LinkBox.svelte";
   import socials from "./data/socialLinks.json";
-  import musicServices from "./data/musicLinks.json";
+  import musicServices from "./data/musicLink.json";
   import Stack from "./lib/Stack.svelte";
   import Show from "./lib/Show.svelte";
   import shows from "./data/shows.json";

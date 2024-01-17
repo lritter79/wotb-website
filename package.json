@@ -12,6 +12,7 @@
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^3.0.1",
     "@tsconfig/svelte": "^5.0.2",
+    "@types/lodash": "^4.14.202",
     "autoprefixer": "^10.4.16",
     "postcss": "^8.4.33",
     "svelte": "^4.2.8",
@@ -24,6 +25,10 @@
   "dependencies": {
     "@fortawesome/free-brands-svg-icons": "^6.5.1",
     "@fortawesome/free-solid-svg-icons": "^6.5.1",
+    "add-to-calendar-button": "^2.5.8",
+    "dayjs": "^1.11.10",
+    "lodash": "^4.17.21",
+    "lodash-es": "^4.17.21",
     "svelte-fa": "^4.0.1"
   }
 }
