@@ -23,7 +23,7 @@
   };
 </script>
 
-<div class="link-container w-64 md:w-2/3 lg:w-2/3 xl:w-2/3">
+<div class="link-container w-64 sm:w-2/3 md:w-2/3 lg:w-2/3 xl:w-2/3">
   <div class="link-container-black p-0.5">
     <a
       href={link}
