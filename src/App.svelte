@@ -1,9 +1,13 @@
 <script lang="ts">
+  import CopyrightFooter from "./lib/Footer.svelte";
+
+  import { Hamburger } from "svelte-hamburgers";
+  import WakeOfTheBlade from "./assets/wakeoftheBlade-white.png";
   import LinkBox from "./lib/LinkBox.svelte";
   import socials from "./data/socialLinks.json";
   import musicServices from "./data/musicLink.json";
   import Stack from "./lib/Stack.svelte";
-  import Show from "./lib/Show.svelte";
+  import Show from "./lib/Show/Show.svelte";
   import shows from "./data/shows.json";
   import {
     faSpotify,
@@ -16,6 +20,8 @@
     faTiktok,
     faCreativeCommonsZero,
   } from "@fortawesome/free-brands-svg-icons";
+  import LogoCircle from "./lib/LogoCircle.svelte";
+  import Menu from "./lib/Menu.svelte";
   interface ComponentDictionary {
     [key: number]: IconDefinition;
     // Add more entries as needed
@@ -33,18 +39,34 @@
     1: faBandcamp,
     2: faApple,
   };
+
+  let open = false; //this is for the hamburger menu
+  let hasLogo = false;
 </script>
 
 <main>
-  <h1 class="text-5xl">Wake of The Blade</h1>
+  <div id="hamburger-positioner">
+    <Hamburger --color="white" bind:open />
+  </div>
+  <Menu bind:open />
+  {#if hasLogo}
+    <LogoCircle />
+  {/if}
   <br />
-  <h2 class="text-4xl">Shows</h2>
+
+  <img class="image" src={WakeOfTheBlade} alt="Circle Image" />
+  <br />
+  <a id="watch" class="section-anchor">
+    <h2 class="text-2xl">Watch</h2>
+  </a>
   <Stack spacing={1}>
     {#each shows as show (show)}
       <Show {show} />
     {/each}</Stack
   >
-  <h2 class="text-4xl">Music</h2>
+  <a id="listen" class="section-anchor">
+    <h2 class="text-2xl">Listen</h2>
+  </a>
   <Stack spacing={1}>
     {#each musicServices as musicService (musicService)}
       <LinkBox
@@ -54,8 +76,10 @@
       />
     {/each}
   </Stack>
+  <a id="follow" class="section-anchor">
+    <h2 class="text-2xl">Follow</h2>
+  </a>
 
-  <h2 class="text-4xl">Social Media</h2>
   <Stack spacing={1}>
     {#each socials as social (social)}
       <LinkBox
@@ -66,3 +90,16 @@
     {/each}
   </Stack>
 </main>
+<CopyrightFooter />
+
+<style>
+  #hamburger-positioner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+  }
+  .section-anchor {
+    scroll-behavior: smooth !important;
+  }
+</style>

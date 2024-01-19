@@ -1,8 +1,10 @@
 <script lang="ts">
-  import type { IconDefinition } from "@fortawesome/free-brands-svg-icons";
+  import { type IconDefinition } from "@fortawesome/free-brands-svg-icons";
+  import { faShare } from "@fortawesome/free-solid-svg-icons";
   import { onMount } from "svelte";
   //   import { copyToClipboard } from "your-copy-clipboard-library"; // Replace with your preferred library or implementation
   import Fa from "svelte-fa";
+
   export let link: string;
   export let linkText: string;
   export let icon: IconDefinition; // Replace 'any' with the actual type of your icon component
@@ -13,16 +15,25 @@
     // Your initialization code, if needed
   });
 
-  const handleCopy = () => {
-    //copyToClipboard(linkText);
-    isCopied = true;
-    setTimeout(() => {
-      isCopied = false;
-    }, 1500); // Reset copied state after 1.5 seconds
+  const handleShare = () => {
+    if (navigator.share) {
+      const shareData: ShareData = {
+        url: link,
+      };
+
+      navigator
+        .share(shareData)
+        .then(() => console.log("Successfully shared"))
+        .catch((error) => console.error("Error sharing:", error));
+    } else {
+      console.log("navigator.share is not supported");
+    }
   };
 </script>
 
-<div class="link-container w-64 sm:w-2/3 md:w-2/3 lg:w-2/3 xl:w-2/3">
+<div
+  class="link-container w-64 sm:w-2/3 md:w-2/3 lg:w-2/3 xl:w-2/3 shadow-lg"
+>
   <div class="link-container-black p-0.5">
     <a
       href={link}
@@ -35,9 +46,8 @@
       </div>
       <div class="link-text">{linkText}</div>
     </a>
-    <button on:click={handleCopy} class="copy-button">
-      <!-- <div class="copy-icon"> {/* Add your copy icon here */}</div> -->
-      <!-- <div class="tooltip">Copy to Clipboard</div> -->
+    <button on:click={handleShare} class="copy-button">
+      <Fa icon={faShare} />
     </button>
   </div>
 </div>

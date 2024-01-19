@@ -6,11 +6,9 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
+  --background-image: url('./assets/fleshEphemeral.jpg');
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background: rgb(138,3,13);
-  background: radial-gradient(circle, rgba(138,3,13,1) 0%, rgba(41,29,27,1) 100%); 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -20,11 +18,18 @@
 
 
 body {
+  background-image: var(--background-image);
+  background-size: cover; /* or background-size: cover; */
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
 }
 
+footer {
+  text-align: center;
+  color: #f4f4f4;
+  font-size: 12px;
+}
 
 
 #app {

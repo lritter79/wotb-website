@@ -1,11 +1,16 @@
 import type { ATCBActionEventConfig } from "add-to-calendar-button";
-import type { Show } from "./types";
+import type { Address, Show } from "./types";
 import dayjs from "dayjs";
+import { add } from "lodash";
 
 export function extractTimeFromISO(isoString: string): string {
   const dateObject: dayjs.Dayjs = dayjs(isoString);
 
   return dateObject.format("hh:mm");
+}
+
+function getFullAddress(address: Address) {
+  return `${address.houseNumber} ${address.streetName}, ${address.city}, ${address.state} ${address.zipcode}`;
 }
 
 export function extractDateFromISO(isoString: string): string {
@@ -44,7 +49,9 @@ export function getEventConfig(show: Show): ATCBActionEventConfig {
   const startTime = startDateObject.format("HH:mm");
   const endTime = endDateObject.format("HH:mm");
   let location = show.venueName;
-  if (show.ticketLink) location = show.ticketLink;
+  if (show.address) {
+    location = getFullAddress(show.address);
+  }
   const config: ATCBActionEventConfig = {
     name,
     description: name,
@@ -53,7 +60,7 @@ export function getEventConfig(show: Show): ATCBActionEventConfig {
     startTime,
     endTime,
     location,
-    options: ["Google", "iCal"],
+    options: ["Google", "iCal", "Apple", "Outlook.com"],
     timeZone: show.timezone,
   };
 

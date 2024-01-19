@@ -5,7 +5,7 @@ type LinkInfo = {
   icon: any;
 };
 
-interface Address {
+export interface Address {
   houseNumber: string;
   streetName: string;
   zipcode: string;
