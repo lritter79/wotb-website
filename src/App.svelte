@@ -23,6 +23,8 @@
   } from "@fortawesome/free-brands-svg-icons";
   import LogoCircle from "./lib/LogoCircle.svelte";
   import Menu from "./lib/Menu.svelte";
+  import Fa from "svelte-fa";
+  import IconGridItem from "./lib/IconGridItem.svelte";
   interface ComponentDictionary {
     [key: number]: IconDefinition;
     // Add more entries as needed
@@ -59,38 +61,33 @@
   <img class="image" src={WakeOfTheBlade} alt="Circle Image" />
   <br />
   <a id="watch" class="section-anchor">
-    <h2 class="text-2xl">Watch</h2>
+    <h2 class="text-2xl">Upcoming Shows</h2>
   </a>
   <Stack spacing={1}>
     {#each shows as show (show)}
       <Show {show} />
     {/each}</Stack
   >
-  <a id="listen" class="section-anchor">
-    <h2 class="text-2xl">Listen</h2>
-  </a>
-  <Stack spacing={1}>
+  <a id="listen" class="section-anchor"> </a>
+  <div class="grid grid-cols-3 gap-4 place-items-center pt-4">
     {#each musicServices as musicService (musicService)}
-      <LinkBox
+      <IconGridItem
         link={musicService.link}
         linkText={musicService.linkText}
         icon={musicIconsDictionary[Number(musicService.id)]}
       />
     {/each}
-  </Stack>
-  <a id="follow" class="section-anchor">
-    <h2 class="text-2xl">Follow</h2>
-  </a>
-
-  <Stack spacing={1}>
+  </div>
+  <a id="follow" class="section-anchor"> </a>
+  <div class="grid grid-cols-3 gap-4 place-items-center">
     {#each socials as social (social)}
-      <LinkBox
+      <IconGridItem
         link={social.link}
         linkText={social.linkText}
         icon={socialsIconsDictionary[Number(social.id)]}
       />
     {/each}
-  </Stack>
+  </div>
 </main>
 <CopyrightFooter />
 

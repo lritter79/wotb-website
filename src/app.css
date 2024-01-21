@@ -19,7 +19,6 @@
   --toastContainerLeft: calc(50vw - 8rem);
   --toastMargin:0;
 }
-
 ._toastContainer > li {
   margin-bottom: 1rem;
 }
