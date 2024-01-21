@@ -13,8 +13,16 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  --toastBackground: black;
+  --toastColor: #white;
+  --toastContainerRight: auto;
+  --toastContainerLeft: calc(50vw - 8rem);
+  --toastMargin:0;
 }
 
+._toastContainer > li {
+  margin-bottom: 1rem;
+}
 
 
 body {

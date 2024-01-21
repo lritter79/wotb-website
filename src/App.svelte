@@ -1,5 +1,6 @@
 <script lang="ts">
   import CopyrightFooter from "./lib/Footer.svelte";
+  import { SvelteToast } from "@zerodevx/svelte-toast";
 
   import { Hamburger } from "svelte-hamburgers";
   import WakeOfTheBlade from "./assets/wakeoftheBlade-white.png";
@@ -44,6 +45,7 @@
   let hasLogo = false;
 </script>
 
+<SvelteToast />
 <main>
   <div id="hamburger-positioner">
     <Hamburger --color="white" bind:open />
@@ -101,5 +103,9 @@
   }
   .section-anchor {
     scroll-behavior: smooth !important;
+  }
+
+  :global(.custom) {
+    border: 1px outset white;
   }
 </style>

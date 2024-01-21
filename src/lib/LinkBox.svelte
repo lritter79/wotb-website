@@ -4,6 +4,7 @@
   import { onMount } from "svelte";
   //   import { copyToClipboard } from "your-copy-clipboard-library"; // Replace with your preferred library or implementation
   import Fa from "svelte-fa";
+  import { toast } from "@zerodevx/svelte-toast";
 
   export let link: string;
   export let linkText: string;
@@ -26,7 +27,16 @@
         .then(() => console.log("Successfully shared"))
         .catch((error) => console.error("Error sharing:", error));
     } else {
-      console.log("navigator.share is not supported");
+      navigator.clipboard.writeText(link);
+      toast.push("Copied Link To Clipboard", {
+        classes: ["custom"],
+        theme: {
+          "--toastBarHeight": 0,
+        },
+        initial: 0,
+        next: 1,
+        duration: 3000,
+      });
     }
   };
 </script>
@@ -58,7 +68,7 @@
     display: inline-block;
     transition: transform 0.3s ease;
     background-color: black;
-    border: 1px solid white;
+    border: 1px outset white;
   }
 
   .link {

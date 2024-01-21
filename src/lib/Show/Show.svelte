@@ -25,7 +25,7 @@
 </script>
 
 <div
-  class="show-card flex flex-col sm:flex-row sm:justify-between bg-black text-white border border-white border-solid p-2 w-64 sm:w-2/3 md:w-2/3 lg:w-2/3 xl:w-2/3 shadow-lg"
+  class="show-card flex flex-col sm:flex-row sm:justify-between bg-black text-white border border-white border-outset p-2 w-64 sm:w-2/3 md:w-2/3 lg:w-2/3 xl:w-2/3 shadow-lg"
 >
   <div class="info-container text-left pr-2">
     <div class="flex items-center">
