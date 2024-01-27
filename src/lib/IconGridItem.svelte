@@ -18,7 +18,13 @@
   class="link p-1"
 >
   <div class="icon p-2">
-    <Fa {icon} size="2x" />
+    <Fa
+      {icon}
+      color="white"
+      secondaryColor="#dc143ccc"
+      style="stroke-width: 10; stroke: #dc143cb3;"
+      size="2x"
+    />
   </div>
 </a>
 
