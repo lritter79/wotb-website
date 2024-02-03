@@ -70,7 +70,7 @@
       {/each}</Stack
     >
     <a id="listen" class="section-anchor"> </a>
-    <div class="grid grid-cols-3 gap-4 place-items-center pt-4">
+    <div class="grid grid-cols-3 gap-4 place-items-center pt-4 p-2">
       {#each musicServices as musicService (musicService)}
         <IconGridItem
           link={musicService.link}
