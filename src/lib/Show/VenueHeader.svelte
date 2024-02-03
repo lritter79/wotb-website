@@ -6,11 +6,11 @@
 </script>
 
 {#if entryTime}
-  <h2 class="text-md sm:text-xl">
+  <h2 class="text-sm md:text-base">
     {venueName}{" @ "}{extractTimeFromISO(entryTime)}
   </h2>
 {:else}
-  <h2 class="text-md sm:text-xl">
+  <h2 class="text-sm md:text-base">
     {venueName}{" @ "}{extractTimeFromISO(startTime)}
   </h2>
 {/if}

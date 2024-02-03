@@ -23,7 +23,7 @@
       color="white"
       secondaryColor="#dc143ccc"
       style="stroke-width: 10; stroke: #dc143cb3;"
-      size="2x"
+      size="2.5x"
     />
   </div>
 </a>

@@ -53,40 +53,42 @@
     <Hamburger --color="white" bind:open />
   </div>
   <Menu bind:open />
-  {#if hasLogo}
-    <LogoCircle />
-  {/if}
-  <br />
+  <div class="h-screen">
+    {#if hasLogo}
+      <LogoCircle />
+    {/if}
+    <br />
 
-  <img class="image" src={WakeOfTheBlade} alt="Circle Image" />
-  <br />
-  <a id="watch" class="section-anchor">
-    <h2 class="text-2xl">Upcoming Shows</h2>
-  </a>
-  <Stack spacing={1}>
-    {#each shows as show (show)}
-      <Show {show} />
-    {/each}</Stack
-  >
-  <a id="listen" class="section-anchor"> </a>
-  <div class="grid grid-cols-3 gap-4 place-items-center pt-4">
-    {#each musicServices as musicService (musicService)}
-      <IconGridItem
-        link={musicService.link}
-        linkText={musicService.linkText}
-        icon={musicIconsDictionary[Number(musicService.id)]}
-      />
-    {/each}
-  </div>
-  <a id="follow" class="section-anchor"> </a>
-  <div class="grid grid-cols-3 gap-4 place-items-center">
-    {#each socials as social (social)}
-      <IconGridItem
-        link={social.link}
-        linkText={social.linkText}
-        icon={socialsIconsDictionary[Number(social.id)]}
-      />
-    {/each}
+    <img class="image" src={WakeOfTheBlade} alt="Circle Image" />
+    <br />
+    <a id="watch" class="section-anchor">
+      <h2 class="sm:text-base md:text-2xl">Upcoming Shows</h2>
+    </a>
+    <Stack spacing={1}>
+      {#each shows as show (show)}
+        <Show {show} />
+      {/each}</Stack
+    >
+    <a id="listen" class="section-anchor"> </a>
+    <div class="grid grid-cols-3 gap-4 place-items-center pt-4">
+      {#each musicServices as musicService (musicService)}
+        <IconGridItem
+          link={musicService.link}
+          linkText={musicService.linkText}
+          icon={musicIconsDictionary[Number(musicService.id)]}
+        />
+      {/each}
+    </div>
+    <a id="follow" class="section-anchor"> </a>
+    <div class="grid grid-cols-3 gap-4 place-items-center">
+      {#each socials as social (social)}
+        <IconGridItem
+          link={social.link}
+          linkText={social.linkText}
+          icon={socialsIconsDictionary[Number(social.id)]}
+        />
+      {/each}
+    </div>
   </div>
 </main>
 <CopyrightFooter />
