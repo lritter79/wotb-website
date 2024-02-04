@@ -3,14 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/jpeg" href="./src/assets/fleshEphemeral.jpg" />
+    <link rel="stylesheet" href="/node_modules/sakura-js/dist/sakura.min.css">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Wake of the Blade</title>
   </head>
   <body>
     <div id="app"></div>
+
     <script type="module" src="/src/main.ts"></script>
     <footer>
       <p>&copy; 2024 Wake of the Blade. All rights reserved.</p>
     </footer>
+    <script src="/node_modules/sakura-js/dist/sakura.min.js"></script>
+    <script>
+      var sakura = new Sakura('body', {fallSpeed: 2, maxSize: 10,delay:1300, colors: [
+        {
+            gradientColorStart: 'rgba(255,189,189)',
+            gradientColorEnd: 'rgba(227,170,181)',
+            gradientColorDegree: 120,
+        },
+        {
+            gradientColorStart: '#FFFFFF',
+            gradientColorEnd: '#F5F5F5',
+            gradientColorDegree: 120,
+        },
+    ],});
+    </script>
   </body>
 </html>
