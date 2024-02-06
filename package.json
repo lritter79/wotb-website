@@ -28,6 +28,7 @@
     "@fortawesome/free-brands-svg-icons": "^6.5.1",
     "@fortawesome/free-solid-svg-icons": "^6.5.1",
     "add-to-calendar-button": "^2.5.8",
+    "browserify": "^17.0.0",
     "dayjs": "^1.11.10",
     "lodash": "^4.17.21",
     "lodash-es": "^4.17.21",
