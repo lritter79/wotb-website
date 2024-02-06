@@ -12,8 +12,8 @@
         "address":{"houseNumber":"1139", "streetName":"Penn Ave", "city":"Pittsburgh", "state":"PA", "zipcode": "15222"},
         "venueName":"Club Pittsburgh",
         "otherBands":["Body Void", "Uzkost", "Grin Hound"],
-        "entryTime": "2024-02-09T19:30:19-05:00",
-        "startTime": "2024-02-09T20:00:19-05:00",
+        "entryTime": "2024-03-29T19:30:19-05:00",
+        "startTime": "2024-03-29T20:00:19-05:00",
         "timezone": "America/New_York",
         "ticketLink": "https://www.ticketleap.events/tickets/cleanertapes/thepitt2"
     
