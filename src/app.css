@@ -46,7 +46,10 @@ footer {
   text-align: center;
 }
 
-
+.sakura {
+  pointer-events: none;
+  position: fixed; 
+}
 
 
 
