@@ -23,4 +23,5 @@ export type Show = {
   timezone: string;
   ticketLink?: string;
   rvspLink?: string;
+  isPast?: boolean;
 };

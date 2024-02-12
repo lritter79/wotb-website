@@ -45,6 +45,11 @@
 
   let open = false; //this is for the hamburger menu
   let hasLogo = false;
+  const upcomingShows = shows.filter((show) => {
+    let presentDate = new Date().getTime();
+    let showDate = new Date(show.startTime).getTime();
+    return showDate > presentDate;
+  });
 </script>
 
 <SvelteToast />
@@ -65,7 +70,7 @@
       <h2 class="sm:text-base md:text-2xl">Upcoming Shows</h2>
     </a>
     <Stack spacing={1}>
-      {#each shows as show (show)}
+      {#each upcomingShows as show (show)}
         <Show {show} />
       {/each}</Stack
     >
