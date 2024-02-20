@@ -7,6 +7,7 @@
 {#if open}
   <div
     id="menu"
+    role="menu"
     class="pl-0 pr-0"
     transition:fade={{ duration: 500 }}
   >
@@ -24,6 +25,7 @@
             }
           }}
           href={`#`}
+          role="menuitem"
           transition:fly={{ y: -15, delay: 50 * i }}
         >
           {link.toUpperCase()}
