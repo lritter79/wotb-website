@@ -17,6 +17,14 @@
         "timezone": "America/New_York",
         "ticketLink": "https://www.ticketleap.events/tickets/cleanertapes/thepitt2"
     
+    },
+    {
+        "address":{"houseNumber":"5121", "streetName":"Butler St", "city":"Pittsburgh", "state":"PA", "zipcode": "15201"},
+        "venueName":"Remedy",
+        "otherBands":["citywitch", "Wizard Killer", "The Cult ov Crowley"],
+        "entryTime": "2024-04-20T19:30:19-05:00",
+        "startTime": "2024-04-20T20:00:19-05:00",
+        "timezone": "America/New_York",    
     }
 ]
 
