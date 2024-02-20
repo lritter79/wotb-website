@@ -17,7 +17,7 @@
   rel="noopener noreferrer"
   class="link p-1"
 >
-  <div class="icon p-2">
+  <div class="icon p-2" role="link">
     <Fa
       {icon}
       color="white"
