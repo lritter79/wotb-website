@@ -12,7 +12,7 @@
     transition:fade={{ duration: 500 }}
   >
     <div id="link-container">
-      {#each ["watch", "listen", "follow"] as link, i}
+      {#each ["watch", "gallery", "listen", "follow"] as link, i}
         <a
           on:click={() => {
             open = false;

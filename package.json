@@ -33,6 +33,7 @@
     "lodash": "^4.17.21",
     "lodash-es": "^4.17.21",
     "sakura-js": "^1.1.1",
+    "svelte-carousel": "^1.0.25",
     "svelte-fa": "^4.0.1"
   }
 }

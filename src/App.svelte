@@ -1,10 +1,8 @@
 <script lang="ts">
   import CopyrightFooter from "./lib/Footer.svelte";
   import { SvelteToast } from "@zerodevx/svelte-toast";
-
   import { Hamburger } from "svelte-hamburgers";
   import WakeOfTheBlade from "./assets/wakeoftheBlade-white.png";
-  import LinkBox from "./lib/LinkBox.svelte";
   import socials from "./data/socialLinks.json";
   import musicServices from "./data/musicLink.json";
   import Stack from "./lib/Stack.svelte";
@@ -23,8 +21,8 @@
   } from "@fortawesome/free-brands-svg-icons";
   import LogoCircle from "./lib/LogoCircle.svelte";
   import Menu from "./lib/Menu.svelte";
-  import Fa from "svelte-fa";
   import IconGridItem from "./lib/IconGridItem.svelte";
+  import Gallery from "./lib/Gallery/Gallery.svelte";
   interface ComponentDictionary {
     [key: number]: IconDefinition;
     // Add more entries as needed
@@ -63,7 +61,7 @@
       <LogoCircle />
     {/if}
     <br />
-
+    <!-- svelte-ignore a11y-img-redundant-alt -->
     <img class="image" src={WakeOfTheBlade} alt="Circle Image" />
     <br />
     <a id="watch" class="section-anchor">
@@ -74,6 +72,7 @@
         <Show {show} />
       {/each}</Stack
     >
+    <Gallery />
     <a id="listen" class="section-anchor"> </a>
     <div class="grid grid-cols-3 gap-4 place-items-center pt-4 p-2">
       {#each musicServices as musicService (musicService)}

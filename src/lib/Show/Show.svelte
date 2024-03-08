@@ -1,9 +1,7 @@
 <script lang="ts">
-  import * as dayjs from "dayjs";
-  import type { Show } from "../../types";
+  import type { Show } from "../../types/types";
   export let show: Show;
   import {
-    extractTimeFromISO,
     extractDateFromISO,
     getEventConfig,
   } from "../../functions";

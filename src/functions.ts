@@ -1,5 +1,5 @@
 import type { ATCBActionEventConfig } from "add-to-calendar-button";
-import type { Address, Show } from "./types";
+import type { Address, Show } from "./types/types";
 import dayjs from "dayjs";
 import { add } from "lodash";
 
