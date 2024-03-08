@@ -17,28 +17,31 @@
 </script>
 
 <a id="gallery" class="section-anchor"> </a>
-<Carousel dots={true} pauseOnFocus={true} arrows={true} let:loaded>
-  {#each images as src, imageIndex (src)}
-    <div class="img-container">
-      {#if loaded.includes(imageIndex)}
-        <img {src} alt={`Wake of the Blade ${imageIndex}`} />
-      {/if}
-    </div>
-  {/each}
-</Carousel>
+<div class="m:w-2/3 md:w-2/3 lg:w-2/3 xl:w-2/3 mx-auto">
+  <Carousel dots={true} pauseOnFocus={true} arrows={true} let:loaded>
+    {#each images as src, imageIndex (src)}
+      <div class="img-container">
+        {#if loaded.includes(imageIndex)}
+          <img {src} alt={`Wake of the Blade ${imageIndex}`} />
+        {/if}
+      </div>
+    {/each}
+  </Carousel>
+</div>
 
 <style>
   .img-container {
-    height: 150px;
-    width: 150px;
     display: flex;
     align-items: center;
     justify-content: center;
     user-select: none;
+    max-height: 693px;
+    overflow: hidden; /* Ensure the image doesn't overflow the container */
   }
 
   .img-container img {
-    height: 100%;
     width: 100%;
+    height: auto; /* This ensures the image maintains its aspect ratio */
+    display: block; /* Removes any default spacing issues */
   }
 </style>

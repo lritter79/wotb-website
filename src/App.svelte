@@ -56,7 +56,7 @@
     <Hamburger --color="white" bind:open />
   </div>
   <Menu bind:open />
-  <div class="h-screen">
+  <div>
     {#if hasLogo}
       <LogoCircle />
     {/if}
