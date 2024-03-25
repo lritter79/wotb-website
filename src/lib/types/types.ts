@@ -1,3 +1,5 @@
+import type { IconDefinition } from "@fortawesome/free-brands-svg-icons";
+
 type LinkInfo = {
   id: number;
   link: string;
@@ -25,3 +27,8 @@ export type Show = {
   rvspLink?: string;
   isPast?: boolean;
 };
+
+export interface ComponentDictionary {
+  [key: number]: IconDefinition;
+  // Add more entries as needed
+}

@@ -1,7 +1,6 @@
 import type { ATCBActionEventConfig } from "add-to-calendar-button";
 import type { Address, Show } from "./types/types";
 import dayjs from "dayjs";
-import { add } from "lodash";
 
 export function extractTimeFromISO(isoString: string): string {
   const dateObject: dayjs.Dayjs = dayjs(isoString);

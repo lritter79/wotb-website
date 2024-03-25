@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { extractTimeFromISO } from "../../functions";
+  import { extractTimeFromISO } from "../functions";
   export let entryTime: string | undefined;
   export let startTime: string;
   export let venueName: string;

@@ -1,10 +1,7 @@
 <script lang="ts">
-  import type { Show } from "../../types/types";
+  import type { Show } from "../types/types";
   export let show: Show;
-  import {
-    extractDateFromISO,
-    getEventConfig,
-  } from "../../functions";
+  import { extractDateFromISO, getEventConfig } from "../functions";
   import Fa from "svelte-fa";
   import "add-to-calendar-button";
   import {

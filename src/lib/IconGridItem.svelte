@@ -1,10 +1,7 @@
 <script lang="ts">
   import { type IconDefinition } from "@fortawesome/free-brands-svg-icons";
-  import { faShare } from "@fortawesome/free-solid-svg-icons";
-  import { onMount } from "svelte";
   //   import { copyToClipboard } from "your-copy-clipboard-library"; // Replace with your preferred library or implementation
   import Fa from "svelte-fa";
-  import { toast } from "@zerodevx/svelte-toast";
 
   export let link: string;
   export let linkText: string;

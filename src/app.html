@@ -2,11 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/jpeg" href="./src/assets/fleshEphemeral.jpg" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sakura-js/dist/sakura.min.css">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Wake of the Blade</title>
+    %sveltekit.head%
   </head>
   <style>
 
@@ -22,13 +21,9 @@
     background-color: #dc143ccc!important;
   }
   </style>
-  <body>
-    <div id="app"></div>
+  <body data-sveltekit-preload-data="hover">
+		<div style="display: contents">%sveltekit.body%</div>
 
-    <script type="module" src="/src/main.ts"></script>
-    <footer>
-      <p>&copy; 2024 Wake of the Blade. All rights reserved.</p>
-    </footer>
     <script src="https://cdn.jsdelivr.net/npm/sakura-js/dist/sakura.min.js"></script>
     <script>
       var sakura = new Sakura('body', {fallSpeed: 2, maxSize: 10,delay:1300, colors: [
