@@ -72,6 +72,9 @@
     {#if show?.ticketLink}
       <LinkButton link={show.ticketLink} linkText="Tickets" />
     {/if}
+    {#if show?.fbLink}
+      <LinkButton link={show.fbLink} linkText="RVSP" />
+    {/if}
     <Button
       icon={faCalendarPlus}
       onClick={() => atcb_action(config)}

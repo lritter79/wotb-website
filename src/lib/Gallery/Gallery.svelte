@@ -1,11 +1,11 @@
 <script lang="ts">
   import Carousel from "svelte-carousel";
-  import Gallery1 from "../../assets/wotb_1.jpg";
-  import Gallery2 from "../../assets/wotb_2.jpg";
-  import Gallery3 from "../../assets/wotb_3.jpg";
-  import Gallery4 from "../../assets/wotb_4.jpg";
-  import Gallery5 from "../../assets/wotb_5.jpg";
-  import Gallery6 from "../../assets/wotb_6.jpg";
+  import Gallery1 from "../../lib/images/wotb_1.jpg";
+  import Gallery2 from "../../lib/images/wotb_2.jpg";
+  import Gallery3 from "../../lib/images/wotb_3.jpg";
+  import Gallery4 from "../../lib/images/wotb_4.jpg";
+  import Gallery5 from "../../lib/images/wotb_5.jpg";
+  import Gallery6 from "../../lib/images/wotb_6.jpg";
   let images = [
     Gallery1,
     Gallery2,
@@ -14,20 +14,28 @@
     Gallery5,
     Gallery6,
   ];
+  import { browser } from "$app/environment";
 </script>
 
-<a id="gallery" class="section-anchor"> </a>
-<div class="m:w-2/3 md:w-2/3 lg:w-2/3 xl:w-2/3 mx-auto">
-  <Carousel dots={true} pauseOnFocus={true} arrows={true} let:loaded>
-    {#each images as src, imageIndex (src)}
-      <div class="img-container">
-        {#if loaded.includes(imageIndex)}
-          <img {src} alt={`Wake of the Blade ${imageIndex}`} />
-        {/if}
-      </div>
-    {/each}
-  </Carousel>
-</div>
+{#if browser}
+  <a id="gallery" class="section-anchor"> </a>
+  <div class="m:w-2/3 md:w-2/3 lg:w-2/3 xl:w-2/3 mx-auto">
+    <Carousel
+      dots={true}
+      pauseOnFocus={true}
+      arrows={true}
+      let:loaded
+    >
+      {#each images as src, imageIndex (src)}
+        <div class="img-container">
+          {#if loaded.includes(imageIndex)}
+            <img {src} alt={`Wake of the Blade ${imageIndex}`} />
+          {/if}
+        </div>
+      {/each}
+    </Carousel>
+  </div>
+{/if}
 
 <style>
   .img-container {

@@ -26,6 +26,7 @@ export type Show = {
   ticketLink?: string;
   rvspLink?: string;
   isPast?: boolean;
+  fbLink?: string;
 };
 
 export interface ComponentDictionary {

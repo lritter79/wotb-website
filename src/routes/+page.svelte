@@ -1,37 +1,7 @@
 <script lang="ts">
-  import socials from "../lib/data/socialLinks.json";
-  import musicServices from "../lib/data/musicLink.json";
   import Stack from "../lib/Stack.svelte";
   import Show from "../lib/Show/Show.svelte";
   import shows from "../lib/data/shows.json";
-  import {
-    faSpotify,
-    type IconDefinition,
-    faBandcamp,
-    faApple,
-    faFacebook,
-    faInstagram,
-    faYoutube,
-    faTiktok,
-    faCreativeCommonsZero,
-  } from "@fortawesome/free-brands-svg-icons";
-  import IconGridItem from "../lib/IconGridItem.svelte";
-  import type { ComponentDictionary } from "../lib/types/types";
-
-  let socialsIconsDictionary: ComponentDictionary = {
-    0: faFacebook,
-    1: faInstagram,
-    2: faYoutube,
-    3: faTiktok,
-    4: faCreativeCommonsZero,
-  };
-
-  let musicIconsDictionary: ComponentDictionary = {
-    0: faSpotify,
-    1: faBandcamp,
-    2: faApple,
-  };
-
   const upcomingShows = shows.filter((show) => {
     let presentDate = new Date().getTime();
     let showDate = new Date(show.startTime).getTime();
@@ -45,6 +15,19 @@
 </svelte:head>
 
 <section>
+  <div class="flex items-center justify-center p-1">
+    <iframe
+      title="bandcamp-widget"
+      style="border: 0; width: 300px; height: 420px;"
+      src="https://bandcamp.com/EmbeddedPlayer/album=4199763080/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/transparent=true/"
+      seamless
+      ><a
+        href="https://wakeoftheblade.bandcamp.com/album/the-flesh-ephemeral-ep"
+        >The Flesh Ephemeral EP by Wake Of The Blade</a
+      ></iframe
+    >
+  </div>
+
   <!-- svelte-ignore a11y-img-redundant-alt -->
   <a id="watch" class="section-anchor">
     <div class="items-center justify-center flex">
@@ -57,25 +40,6 @@
     {/each}</Stack
   >
   <a id="listen" class="section-anchor"> </a>
-  <div class="grid grid-cols-3 gap-4 place-items-center pt-4 p-2">
-    {#each musicServices as musicService (musicService)}
-      <IconGridItem
-        linkText={musicService.linkText}
-        link={musicService.link}
-        icon={musicIconsDictionary[Number(musicService.id)]}
-      />
-    {/each}
-  </div>
-  <a id="follow" class="section-anchor"> </a>
-  <div class="grid grid-cols-3 gap-4 place-items-center">
-    {#each socials as social (social)}
-      <IconGridItem
-        linkText={social.linkText}
-        link={social.link}
-        icon={socialsIconsDictionary[Number(social.id)]}
-      />
-    {/each}
-  </div>
 </section>
 
 <style>

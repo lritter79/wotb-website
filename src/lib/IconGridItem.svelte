@@ -1,8 +1,8 @@
 <script lang="ts">
   import { type IconDefinition } from "@fortawesome/free-brands-svg-icons";
   //   import { copyToClipboard } from "your-copy-clipboard-library"; // Replace with your preferred library or implementation
-  import Fa from "svelte-fa";
-
+  import Fa, { type IconSize } from "svelte-fa";
+  export let size: IconSize = "2.5x";
   export let link: string;
   export let linkText: string;
   export let icon: IconDefinition; // Replace 'any' with the actual type of your icon component
@@ -20,7 +20,7 @@
       color="white"
       secondaryColor="#dc143ccc"
       style="stroke-width: 10; stroke: #dc143cb3;"
-      size="2.5x"
+      {size}
     />
   </div>
 </a>

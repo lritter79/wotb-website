@@ -1,6 +1,5 @@
 <script lang="ts">
   import WakeOfTheBlade from "$lib/images/wakeoftheBlade-white.png";
-  import CopyrightFooter from "../lib/Footer.svelte";
   import { SvelteToast } from "@zerodevx/svelte-toast";
   import { Hamburger } from "svelte-hamburgers";
   import LogoCircle from "../lib/LogoCircle.svelte";
@@ -8,16 +7,17 @@
   let open: boolean = false; //this is for the hamburger menu
   let hasLogo = false;
   import "./app.css";
+  import SocialsGrid from "../lib/SocialsGrid.svelte";
 </script>
 
-<div class="app">
+<main class="app">
   <SvelteToast />
-  <main>
+  <div id="container">
     <div id="hamburger-positioner">
       <Hamburger --color="white" bind:open />
     </div>
     <Menu bind:open />
-    <div>
+    <div class="content">
       {#if hasLogo}
         <LogoCircle />
       {/if}
@@ -30,11 +30,19 @@
       />
       <slot />
     </div>
-  </main>
-  <CopyrightFooter />
-</div>
+  </div>
+  <footer><SocialsGrid /></footer>
+</main>
 
 <style>
+  #container {
+    min-height: 90vh;
+  }
+  footer {
+    background-color: black;
+    z-index: 99;
+    position: relative;
+  }
   #hamburger-positioner {
     position: fixed;
     top: 0;

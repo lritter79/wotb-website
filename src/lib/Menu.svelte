@@ -1,6 +1,7 @@
 <script lang="ts">
   import { fly, scale, fade } from "svelte/transition";
   import { quadOut } from "svelte/easing";
+  import SocialsGrid from "./SocialsGrid.svelte";
   export let open = false;
 </script>
 
@@ -12,27 +13,33 @@
     transition:fade={{ duration: 500 }}
   >
     <div id="link-container">
-      {#each ["watch", "gallery", "listen", "follow"] as link, i}
-        <a
-          on:click={() => {
-            open = false;
-            const element = document.getElementById(link);
-            if (element) {
-              element.scrollIntoView({
-                behavior: "smooth",
-                block: "start",
-              });
-            }
-          }}
-          href={`#`}
-          role="menuitem"
-          transition:fly={{ y: -15, delay: 50 * i }}
-        >
-          {link.toUpperCase()}
-        </a>
-      {/each}
-    </div>
+      <a
+        on:click={() => {
+          open = false;
+        }}
+        href="/"
+      >
+        HOME
+      </a>
+      <a
+        on:click={() => {
+          open = false;
+        }}
+        href="/gallery"
+      >
+        GALLERY
+      </a>
 
+      <a
+        on:click={() => {
+          open = false;
+        }}
+        href="/about"
+      >
+        ABOUT
+      </a>
+    </div>
+    <SocialsGrid size="1.5x" />
     <hr
       transition:scale={{
         duration: 750,
