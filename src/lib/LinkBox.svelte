@@ -57,7 +57,7 @@
           color="white"
           secondaryColor="#dc143ccc"
           style="stroke-width: 10; stroke: #dc143cb3;"
-          size="2x"
+          size="1.5x"
         />
       </div>
       <div class="link-text">{linkText}</div>
@@ -87,6 +87,12 @@
 
   .icon {
     position: absolute;
+    transition: transform 0.3s ease;
+    filter: drop-shadow(0px 0px 10px rgba(220, 20, 60, 0.6));
+  }
+
+  .icon:hover {
+    transform: scale(1.1);
   }
 
   .link-text {
