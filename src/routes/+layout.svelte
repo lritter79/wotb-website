@@ -31,7 +31,6 @@
       <slot />
     </div>
   </div>
-  <footer><SocialsGrid /></footer>
 </main>
 
 <style>
