@@ -75,7 +75,19 @@
   <a id="listen" class="section-anchor">
     <h2 class="text-2xl">Listen</h2>
   </a>
+
   <Stack spacing={1}>
+    <div class="flex items-center justify-center p-1">
+      <iframe
+        style="border: 0; width: 100%; height: 42px;"
+        src="https://bandcamp.com/EmbeddedPlayer/album=4199763080/size=small/bgcol=333333/linkcol=ffffff/transparent=true/"
+        seamless
+        ><a
+          href="https://wakeoftheblade.bandcamp.com/album/the-flesh-ephemeral-ep"
+          >The Flesh Ephemeral EP by Wake Of The Blade</a
+        ></iframe
+      >
+    </div>
     {#each musicServices as musicService (musicService)}
       <LinkBox
         link={musicService.link}
@@ -109,6 +121,24 @@
   }
   .section-anchor {
     scroll-behavior: smooth !important;
+  }
+  h2 {
+    text-shadow: 2px 2px #dc143cb3;
+    position: relative;
+  }
+
+  h2:before {
+    content: "⚔";
+    text-shadow: 2px 2px #dc143cb3;
+
+    color: white;
+  }
+
+  h2:after {
+    content: "⚔";
+    text-shadow: 2px 2px #dc143cb3;
+
+    color: white;
   }
 
   :global(.custom) {
