@@ -73,7 +73,10 @@
   </div>
   <div class="button-container flex flex-col justify-around">
     {#if show?.ticketLink}
-      <LinkButton link="https://www.google.com" linkText="Tickets" />
+      <LinkButton link={show.ticketLink} linkText="Tickets" />
+    {/if}
+    {#if show?.fbLink}
+      <LinkButton link={show.fbLink} linkText="RVSP" />
     {/if}
     <Button
       icon={faCalendarPlus}
