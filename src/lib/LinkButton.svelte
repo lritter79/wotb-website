@@ -25,4 +25,7 @@
   .button:hover {
     @apply bg-gray-200;
   }
+  a {
+    text-align: center;
+  }
 </style>

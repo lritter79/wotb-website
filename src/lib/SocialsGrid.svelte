@@ -30,10 +30,11 @@
     1: faBandcamp,
     2: faApple,
   };
+  let visibleSocials = socials.slice(0, 3);
 </script>
 
 <div
-  class="grid grid-cols-7 gap-4 place-items-center pt-4 p-2 w-screen"
+  class="grid grid-cols-7 gap-1 place-items-center pt-4 p-2 w-screen"
 >
   {#each musicServices as musicService (musicService)}
     <IconGridItem
@@ -43,7 +44,7 @@
       icon={musicIconsDictionary[Number(musicService.id)]}
     />
   {/each}
-  {#each socials as social (social)}
+  {#each visibleSocials as social (social)}
     <IconGridItem
       {size}
       linkText={social.linkText}

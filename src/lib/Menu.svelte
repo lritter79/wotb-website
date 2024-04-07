@@ -39,7 +39,7 @@
         ABOUT
       </a>
     </div>
-    <SocialsGrid size="1.5x" />
+    <SocialsGrid size="sm" />
     <hr
       transition:scale={{
         duration: 750,
