@@ -19,7 +19,7 @@
       shit. Based out of Pittsburgh, PA, each member has spent
       countless years honing their grim craft. Their songs reach both
       technical, virtuosic highs and barren, minimal lows. A true
-      chimera of a band, the meld death, doom, black, and progressive
+      chimera of a band, they meld death, doom, black, and progressive
       metal in a way that few would dare.
     </p>
   </div>

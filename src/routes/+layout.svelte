@@ -7,7 +7,10 @@
   let open: boolean = false; //this is for the hamburger menu
   let hasLogo = false;
   import "./app.css";
-  import SocialsGrid from "../lib/SocialsGrid.svelte";
+  import { fade } from "svelte/transition";
+  import { cubicIn, cubicOut } from "svelte/easing";
+
+  export let data;
 </script>
 
 <main class="app">
@@ -28,14 +31,21 @@
         src={WakeOfTheBlade}
         alt="Circle Image"
       />
-      <slot />
+      {#key data.pathname}
+        <div
+          in:fade={{ easing: cubicIn, duration: 500, delay: 500 }}
+          out:fade={{ easing: cubicOut, duration: 499 }}
+        >
+          <slot />
+        </div>
+      {/key}
     </div>
   </div>
 </main>
 
 <style>
   #container {
-    min-height: 90vh;
+    min-height: 100vh;
   }
   footer {
     background-color: black;

@@ -51,7 +51,7 @@
 
 <section>
   <a id="watch" class="section-anchor">
-    <h2 class="text-2xl">Watch</h2>
+    <h2 class="text-2xl">Upcoming Shows</h2>
   </a>
   <Stack spacing={1}>
     {#each upcomingShows as show (show)}
@@ -64,9 +64,10 @@
 
   <Stack spacing={1}>
     <div class="flex items-center justify-center p-1">
+      <!-- svelte-ignore a11y-missing-attribute -->
       <iframe
-        style="border: 0; width: 100%; height: 42px;"
-        src="https://bandcamp.com/EmbeddedPlayer/album=4199763080/size=small/bgcol=333333/linkcol=ffffff/transparent=true/"
+        style="border: 0; width: 100%; height: 120px;"
+        src="https://bandcamp.com/EmbeddedPlayer/album=4199763080/size=large/bgcol=333333/linkcol=e32c14/tracklist=false/artwork=small/transparent=true/"
         seamless
         ><a
           href="https://wakeoftheblade.bandcamp.com/album/the-flesh-ephemeral-ep"
