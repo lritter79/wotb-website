@@ -1,12 +1,7 @@
 <script lang="ts">
-  import * as dayjs from "dayjs";
-  import type { Show } from "../../types";
+  import type { Show } from "../types/types";
   export let show: Show;
-  import {
-    extractTimeFromISO,
-    extractDateFromISO,
-    getEventConfig,
-  } from "../../functions";
+  import { extractDateFromISO, getEventConfig } from "../functions";
   import Fa from "svelte-fa";
   import "add-to-calendar-button";
   import {
@@ -30,10 +25,12 @@
   <div class="info-container text-left pr-2">
     <div class="flex items-center">
       {#if show.entryTime}
-        <h3 class="mr-2">{extractDateFromISO(show.entryTime)}</h3>
+        <h3 class="mr-2 text-sm md:text-base">
+          {extractDateFromISO(show.entryTime)}
+        </h3>
       {/if}
       {#if show.address}
-        <h2 class="mr-2">
+        <h2 class="mr-2 text-sm md:text-base">
           {show.address.city}, {show.address.state}
         </h2>
         <a
@@ -65,7 +62,7 @@
       />
     {/if}
 
-    <h4>
+    <h4 class="text-sm md:text-md">
       {#if show.otherBands && show.otherBands.length > 0}
         w/ {show.otherBands.join(", ")}
       {/if}
@@ -73,7 +70,10 @@
   </div>
   <div class="button-container flex flex-col justify-around">
     {#if show?.ticketLink}
-      <LinkButton link="https://www.google.com" linkText="Tickets" />
+      <LinkButton link={show.ticketLink} linkText="Tickets" />
+    {/if}
+    {#if show?.fbLink}
+      <LinkButton link={show.fbLink} linkText="RVSP" />
     {/if}
     <Button
       icon={faCalendarPlus}

@@ -52,7 +52,13 @@
       class="link text-xl md:text-xl lg:text-xl"
     >
       <div class="icon">
-        <Fa {icon} />
+        <Fa
+          {icon}
+          color="white"
+          secondaryColor="#dc143ccc"
+          style="stroke-width: 10; stroke: #dc143cb3;"
+          size="1.5x"
+        />
       </div>
       <div class="link-text">{linkText}</div>
     </a>

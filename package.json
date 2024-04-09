@@ -7,9 +7,12 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "check": "svelte-check --tsconfig ./tsconfig.json"
+    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json"
   },
   "devDependencies": {
+    "@sveltejs/adapter-auto": "^3.0.0",
+    "@sveltejs/adapter-netlify": "^4.1.0",
+    "@sveltejs/kit": "^2.0.0",
     "@sveltejs/vite-plugin-svelte": "^3.0.1",
     "@tsconfig/svelte": "^5.0.2",
     "@types/lodash": "^4.14.202",
@@ -28,9 +31,13 @@
     "@fortawesome/free-brands-svg-icons": "^6.5.1",
     "@fortawesome/free-solid-svg-icons": "^6.5.1",
     "add-to-calendar-button": "^2.5.8",
+    "browserify": "^17.0.0",
     "dayjs": "^1.11.10",
     "lodash": "^4.17.21",
     "lodash-es": "^4.17.21",
+    "sakura-js": "^1.1.1",
+    "svelte-carousel": "^1.0.25",
+    "svelte-device-info": "^1.0.4",
     "svelte-fa": "^4.0.1"
   }
 }
