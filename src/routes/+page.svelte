@@ -1,6 +1,4 @@
 <script lang="ts">
-  export const prerender = true;
-
   import Stack from "../lib/Stack.svelte";
   import Show from "../lib/Show/Show.svelte";
   import LinkBox from "./../lib/LinkBox.svelte";
