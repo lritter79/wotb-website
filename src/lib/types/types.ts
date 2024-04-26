@@ -15,7 +15,7 @@ export interface Address {
   state: string;
 }
 
-export type Show = {
+export interface Show {
   venueName: string;
   address?: Address;
   otherBands?: string[];
@@ -27,7 +27,7 @@ export type Show = {
   rvspLink?: string;
   isPast?: boolean;
   fbLink?: string;
-};
+}
 
 export interface ComponentDictionary {
   [key: number]: IconDefinition;
