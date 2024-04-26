@@ -1,7 +1,8 @@
 <script lang="ts">
+  export const prerender = true;
+
   import Stack from "../lib/Stack.svelte";
   import Show from "../lib/Show/Show.svelte";
-  import shows from "../lib/data/shows.json";
   import LinkBox from "./../lib/LinkBox.svelte";
   import socials from "../lib/data/socialLinks.json";
   import musicServices from "../lib/data/musicLink.json";
@@ -36,7 +37,9 @@
 
   let open = false; //this is for the hamburger menu
   let hasLogo = false;
-
+  export let data: { shows: string };
+  console.log(data);
+  let shows: Show[] = JSON.parse(data.shows);
   const upcomingShows = shows.filter((show) => {
     let presentDate = new Date().getTime();
     let showDate = new Date(show.startTime).getTime();
