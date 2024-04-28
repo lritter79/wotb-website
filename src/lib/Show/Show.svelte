@@ -4,10 +4,7 @@
   import { extractDateFromISO, getEventConfig } from "../functions";
   import Fa from "svelte-fa";
   import "add-to-calendar-button";
-  import {
-    atcb_action,
-    type ATCBActionEventConfig,
-  } from "add-to-calendar-button";
+  import { atcb_action } from "add-to-calendar-button";
   import {
     faDirections,
     faCalendarPlus,
