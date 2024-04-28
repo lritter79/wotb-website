@@ -1,4 +1,11 @@
 <script lang="ts">
+  import Stack from "../../lib/Stack.svelte";
+  import Show from "../../lib/Show/Show.svelte";
+  import type { Show as ShowType } from "../../lib/types/types";
+  export let data: { shows: string };
+  console.log("about - data", data);
+  let shows: ShowType[] = JSON.parse(data.shows);
+  const pastShows = shows;
 </script>
 
 <svelte:head>
@@ -22,6 +29,17 @@
       chimera of a band, they meld death, doom, black, and progressive
       metal in a way that few would dare.
     </p>
+  </div>
+  <div
+    class="flex justify-center flex-col items-center p-3 my-9 mx-10 lg:mx-20"
+  >
+    <h2 class="text-2xl">Past Shows</h2>
+
+    <Stack spacing={1}>
+      {#each pastShows as show (show)}
+        <Show {show} />
+      {/each}</Stack
+    >
   </div>
 </section>
 

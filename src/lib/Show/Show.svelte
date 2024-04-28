@@ -1,6 +1,7 @@
 <script lang="ts">
   import type { Show } from "../types/types";
   export let show: Show;
+  const isPast = new Date(show.startTime) < new Date();
   import { extractDateFromISO, getEventConfig } from "../functions";
   import Fa from "svelte-fa";
   import "add-to-calendar-button";
@@ -38,7 +39,7 @@
         </a>
       {/if}
     </div>
-    {#if show?.ticketLink}
+    {#if show?.ticketLink && !isPast}
       <a
         href={show.ticketLink}
         target="_blank"
@@ -65,18 +66,20 @@
       {/if}
     </h4>
   </div>
-  <div class="button-container flex flex-col justify-around">
-    {#if show?.ticketLink}
-      <LinkButton link={show.ticketLink} linkText="Tickets" />
-    {/if}
-    {#if show?.fbLink}
-      <LinkButton link={show.fbLink} linkText="RVSP" />
-    {/if}
-    <Button
-      icon={faCalendarPlus}
-      onClick={() => atcb_action(config)}
-    />
-  </div>
+  {#if !isPast}
+    <div class="button-container flex flex-col justify-around">
+      {#if show?.ticketLink}
+        <LinkButton link={show.ticketLink} linkText="Tickets" />
+      {/if}
+      {#if show?.fbLink}
+        <LinkButton link={show.fbLink} linkText="RVSP" />
+      {/if}
+      <Button
+        icon={faCalendarPlus}
+        onClick={() => atcb_action(config)}
+      />
+    </div>
+  {/if}
 </div>
 
 <style>
