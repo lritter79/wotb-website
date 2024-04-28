@@ -104,6 +104,7 @@
   }
 
   h2 {
+    font-family: "OptimusPrincepsSemiBold";
     text-shadow: 2px 2px #dc143cb3;
     position: relative;
   }

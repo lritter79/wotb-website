@@ -6,7 +6,7 @@
   <title>About</title>
   <meta
     name="Wake of the Blade"
-    content="Wake of the Blade - About"
+    content="Wake of the Blade - Gallery"
   />
 </svelte:head>
 
