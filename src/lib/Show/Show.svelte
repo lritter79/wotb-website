@@ -26,6 +26,10 @@
         <h3 class="mr-2 text-sm md:text-base">
           {extractDateFromISO(show.entryTime)}
         </h3>
+      {:else}
+        <h3 class="mr-2 text-sm md:text-base">
+          {extractDateFromISO(show.startTime)}
+        </h3>
       {/if}
       {#if show.address}
         <h2 class="mr-2 text-sm md:text-base">
