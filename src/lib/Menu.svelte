@@ -12,41 +12,48 @@
     class="pl-0 pr-0"
     transition:fade={{ duration: 500 }}
   >
-    <div id="link-container">
-      <a
-        on:click={() => {
-          open = false;
-        }}
-        href="/"
-      >
-        HOME
-      </a>
-      <a
-        on:click={() => {
-          open = false;
-        }}
-        href="/gallery"
-      >
-        GALLERY
-      </a>
+    <div class="flex flex-col h-full">
+      <div>
+        <div id="link-container">
+          <a
+            on:click={() => {
+              open = false;
+            }}
+            href="/"
+          >
+            HOME
+          </a>
+          <a
+            on:click={() => {
+              open = false;
+            }}
+            href="/gallery"
+          >
+            GALLERY
+          </a>
 
-      <a
-        on:click={() => {
-          open = false;
-        }}
-        href="/about"
-      >
-        ABOUT
-      </a>
+          <a
+            on:click={() => {
+              open = false;
+            }}
+            href="/about"
+          >
+            ABOUT
+          </a>
+        </div>
+        <hr
+          transition:scale={{
+            duration: 750,
+            easing: quadOut,
+            opacity: 1,
+          }}
+        />
+      </div>
+
+      <div class="h-full relative">
+        <SocialsGrid size="sm" />
+      </div>
     </div>
-    <SocialsGrid size="sm" />
-    <hr
-      transition:scale={{
-        duration: 750,
-        easing: quadOut,
-        opacity: 1,
-      }}
-    />
   </div>
 {/if}
 
@@ -64,6 +71,7 @@
     padding: 1em;
     padding-top: 0;
     color: #eef;
+    height: 100vh;
   }
   #link-container {
     display: flex;

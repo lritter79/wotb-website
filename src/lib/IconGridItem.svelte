@@ -2,9 +2,8 @@
   import { type IconDefinition } from "@fortawesome/free-brands-svg-icons";
   //   import { copyToClipboard } from "your-copy-clipboard-library"; // Replace with your preferred library or implementation
   import Fa, { type IconSize } from "svelte-fa";
-  export let size: IconSize = "2.5x";
+  export let size: IconSize;
   export let link: string;
-  export let linkText: string;
   export let icon: IconDefinition; // Replace 'any' with the actual type of your icon component
 </script>
 
@@ -26,9 +25,6 @@
 </a>
 
 <style>
-  .svelte-fa-base {
-  }
-
   .icon {
     transition: transform 0.3s ease;
     filter: drop-shadow(0px 0px 10px rgba(220, 20, 60, 0.6));

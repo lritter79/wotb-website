@@ -34,12 +34,11 @@
 </script>
 
 <div
-  class="grid grid-cols-7 gap-1 place-items-center pt-4 p-2 w-screen"
+  class="grid grid-cols-6 gap-1 place-items-center pt-4 p-2 w-full absolute bottom-0"
 >
   {#each musicServices as musicService (musicService)}
     <IconGridItem
       {size}
-      linkText={musicService.linkText}
       link={musicService.link}
       icon={musicIconsDictionary[Number(musicService.id)]}
     />
@@ -47,7 +46,6 @@
   {#each visibleSocials as social (social)}
     <IconGridItem
       {size}
-      linkText={social.linkText}
       link={social.link}
       icon={socialsIconsDictionary[Number(social.id)]}
     />
