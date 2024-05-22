@@ -2,17 +2,14 @@
   import { fly, scale, fade } from "svelte/transition";
   import { quadOut } from "svelte/easing";
   import SocialsGrid from "./SocialsGrid.svelte";
+  import Logo from "./Logo.svelte";
   export let open = false;
 </script>
 
 {#if open}
-  <div
-    id="menu"
-    role="menu"
-    class="pl-0 pr-0"
-    transition:fade={{ duration: 500 }}
-  >
+  <div id="menu" role="menu" transition:fade={{ duration: 500 }}>
     <div class="flex flex-col h-full">
+      <Logo />
       <div>
         <div id="link-container">
           <a
@@ -41,13 +38,15 @@
             ABOUT
           </a>
         </div>
-        <hr
-          transition:scale={{
-            duration: 750,
-            easing: quadOut,
-            opacity: 1,
-          }}
-        />
+        <div class="pl-10 pr-10">
+          <hr
+            transition:scale={{
+              duration: 750,
+              easing: quadOut,
+              opacity: 1,
+            }}
+          />
+        </div>
       </div>
 
       <div class="h-full relative">
@@ -68,7 +67,6 @@
     text-align: center;
     font-size: 1.5em;
     letter-spacing: 0.15em;
-    padding: 1em;
     padding-top: 0;
     color: #eef;
     height: 100vh;
