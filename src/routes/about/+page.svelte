@@ -3,7 +3,7 @@
   import Show from "../../lib/Show/Show.svelte";
   import type { Show as ShowType } from "../../lib/types/types";
   export let data: { shows: string };
-  console.log("about - data", data);
+  //console.log("about - data", data);
   let shows: ShowType[] = JSON.parse(data.shows);
   const pastShows = shows;
 </script>

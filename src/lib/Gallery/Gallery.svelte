@@ -1,4 +1,5 @@
 <script lang="ts">
+  import Gallery from "svelte-image-gallery";
   import Carousel from "svelte-carousel";
   import Gallery1 from "../../lib/images/wotb_1.jpg";
   import Gallery2 from "../../lib/images/wotb_2.jpg";
@@ -20,7 +21,7 @@
 {#if browser}
   <a id="gallery" class="section-anchor"> </a>
   <div class="m:w-2/3 md:w-2/3 lg:w-2/3 xl:w-2/3 mx-auto">
-    <Carousel
+    <!-- <Carousel
       dots={true}
       pauseOnFocus={true}
       arrows={true}
@@ -33,7 +34,14 @@
           {/if}
         </div>
       {/each}
-    </Carousel>
+    </Carousel> -->
+    <Gallery loading="eager">
+      {#each images as src, imageIndex (src)}
+        <div class="img-container">
+          <img {src} alt={`Wake of the Blade ${imageIndex}`} />
+        </div>
+      {/each}
+    </Gallery>
   </div>
 {/if}
 
