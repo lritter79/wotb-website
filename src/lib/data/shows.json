@@ -1,0 +1,75 @@
+[
+  {
+    "address": {
+      "houseNumber": "268",
+      "streetName": "High St",
+      "city": "Morgantown",
+      "state": "WV",
+      "zipcode": "26505"
+    },
+    "venueName": "Morgantown Art Bar",
+    "otherBands": ["Oxeneers", "Wizard Killer"],
+    "entryTime": "2024-02-09T19:00:19-05:00",
+    "startTime": "2024-02-09T20:00:19-05:00",
+    "timezone": "America/New_York",
+    "isPast": true
+  },
+  {
+    "address": {
+      "houseNumber": "1139",
+      "streetName": "Penn Ave",
+      "city": "Pittsburgh",
+      "state": "PA",
+      "zipcode": "15222"
+    },
+    "venueName": "Club Pittsburgh",
+    "otherBands": ["Body Void", "Uzkost", "Grin Hound"],
+    "entryTime": "2024-03-29T19:30:19-05:00",
+    "startTime": "2024-03-29T20:00:19-05:00",
+    "timezone": "America/New_York",
+    "ticketLink": "https://www.ticketleap.events/tickets/cleanertapes/thepitt2"
+  },
+  {
+    "address": {
+      "houseNumber": "5121",
+      "streetName": "Butler St",
+      "city": "Pittsburgh",
+      "state": "PA",
+      "zipcode": "15201"
+    },
+    "venueName": "Remedy",
+    "otherBands": ["citywitch", "Mold Farmer", "The Cult ov Crowley"],
+    "entryTime": "2024-04-20T19:00:19-05:00",
+    "startTime": "2024-04-20T20:00:19-05:00",
+    "timezone": "America/New_York",
+    "fbLink": "https://www.facebook.com/events/882462380231194"
+  },
+  {
+    "address": {
+      "houseNumber": "5832",
+      "streetName": "Forward Ave",
+      "city": "Pittsburgh",
+      "state": "PA",
+      "zipcode": "15217"
+    },
+    "venueName": "Squirrel Hill Sports Bar",
+    "otherBands": ["Gutgash", "Vulcanite"],
+    "entryTime": "2024-05-24T20:00:19-05:00",
+    "startTime": "2024-05-24T20:00:19-05:00",
+    "timezone": "America/New_York"
+  },
+  {
+    "address": {
+      "houseNumber": "732",
+      "streetName": "E Warrington Ave",
+      "city": "Pittsburgh",
+      "state": "PA",
+      "zipcode": "15210"
+    },
+    "venueName": "Shred Shed",
+    "otherBands": ["Uzkost", "Unfurl", "Chromewaves"],
+    "entryTime": "2024-06-09T17:00:19-05:00",
+    "startTime": "2024-06-09T17:00:19-05:00",
+    "timezone": "America/New_York"
+  }
+]

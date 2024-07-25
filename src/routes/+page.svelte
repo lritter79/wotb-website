@@ -51,18 +51,20 @@
 </svelte:head>
 
 <section>
-  <a id="watch" class="section-anchor">
-    <h2 class="text-2xl">Upcoming Shows</h2>
-  </a>
-  <Stack spacing={1}>
-    {#each upcomingShows as show (show)}
-      <Show {show} />
-    {/each}</Stack
-  >
+  {#if upcomingShows.length > 0}
+    <a id="watch" class="section-anchor">
+      <h2 class="text-2xl">Upcoming Shows</h2>
+    </a>
+    <Stack spacing={1}>
+      {#each upcomingShows as show (show)}
+        <Show {show} />
+      {/each}</Stack
+    >
+  {/if}
+
   <a id="listen" class="section-anchor">
     <h2 class="text-2xl">Listen</h2>
   </a>
-
   <Stack spacing={1}>
     <div class="flex items-center justify-center p-1">
       <!-- svelte-ignore a11y-missing-attribute -->
@@ -76,6 +78,9 @@
         ></iframe
       >
     </div>
+  </Stack>
+  <!-- <Stack spacing={1}>
+
     {#each musicServices as musicService (musicService)}
       <LinkBox
         link={musicService.link}
@@ -96,7 +101,7 @@
         icon={socialsIconsDictionary[Number(social.id)]}
       />
     {/each}
-  </Stack>
+  </Stack> -->
 </section>
 
 <style>
