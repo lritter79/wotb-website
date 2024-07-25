@@ -8,7 +8,7 @@
   import { cubicIn, cubicOut } from "svelte/easing";
   import Logo from "../lib/Logo.svelte";
   import { OnMount } from "fractils";
-
+  import SocialsGrid from "../lib/SocialsGrid.svelte";
   export let data;
 </script>
 
@@ -42,19 +42,20 @@
           {/key}
         </div>
       </div>
-    </div></OnMount
-  >
+      <div class="h-full">
+        <div class="relative">
+          <SocialsGrid size="lg" isAbsolute={false} />
+        </div>
+      </div>
+    </div>
+  </OnMount>
 </main>
 
 <style>
-  #container {
+  main {
     min-height: 100vh;
   }
-  footer {
-    background-color: black;
-    z-index: 99;
-    position: relative;
-  }
+
   #hamburger-positioner {
     position: absolute;
     top: 0;

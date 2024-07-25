@@ -1,5 +1,6 @@
 <script lang="ts">
   export let size: IconSize = "3x";
+  export let isAbsolute: boolean = true;
   import socials from "../lib/data/socialLinks.json";
   import musicServices from "../lib/data/musicLink.json";
   import IconGridItem from "../lib/IconGridItem.svelte";
@@ -34,7 +35,7 @@
 </script>
 
 <div
-  class="grid grid-cols-6 gap-1 place-items-center pt-4 p-2 w-full absolute bottom-0"
+  class={`grid grid-cols-6 gap-1 place-items-center pt-4 p-2 w-full${isAbsolute ? " absolute bottom-0" : ""}`}
 >
   {#each musicServices as musicService (musicService)}
     <IconGridItem
