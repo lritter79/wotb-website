@@ -1,6 +1,7 @@
 <script lang="ts">
   import type { Show } from "../types/types";
   export let show: Show;
+  console.log(show);
   const isPast = new Date(show.startTime) < new Date();
   import { extractDateFromISO, getEventConfig } from "../functions";
   import Fa from "svelte-fa";

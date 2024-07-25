@@ -1,9 +1,10 @@
-import { MongoClient } from "mongodb";
+import mongoose from "mongoose";
 import { MONGO_URL } from "$env/static/private";
-const client = new MongoClient(MONGO_URL);
 export async function start_mongo(): Promise<void> {
   console.log(`>>>Starting mongo...`);
-  await client.connect();
+  try {
+    await mongoose.connect(MONGO_URL);
+  } catch (err) {
+    console.log(`>>>There was an error starting mongo: ${err}`);
+  }
 }
-
-export default client.db("wotb");

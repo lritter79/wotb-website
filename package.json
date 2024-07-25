@@ -36,6 +36,7 @@
     "lodash": "^4.17.21",
     "lodash-es": "^4.17.21",
     "mongodb": "^6.5.0",
+    "mongoose": "^8.5.1",
     "sakura-js": "^1.1.1",
     "svelte-carousel": "^1.0.25",
     "svelte-device-info": "^1.0.4",

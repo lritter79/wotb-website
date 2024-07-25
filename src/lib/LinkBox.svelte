@@ -24,8 +24,8 @@
 
       navigator
         .share(shareData)
-        .then(() => console.log("Successfully shared"))
-        .catch((error) => console.error("Error sharing:", error));
+        .then(() => alert("Successfully shared"))
+        .catch((error) => alert("Error sharing"));
     } else {
       navigator.clipboard.writeText(link);
       toast.push("Copied Link To Clipboard", {
