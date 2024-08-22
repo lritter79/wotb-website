@@ -10,7 +10,7 @@
   <div id="menu" role="menu" transition:fade={{ duration: 500 }}>
     <div class="flex flex-col h-full">
       <Logo />
-      <div>
+      <section>
         <div id="link-container">
           <a
             on:click={() => {
@@ -47,7 +47,7 @@
             }}
           />
         </div>
-      </div>
+      </section>
 
       <div class="h-full relative">
         <SocialsMenuFooter isAbsolute={true} size="2.5x" />

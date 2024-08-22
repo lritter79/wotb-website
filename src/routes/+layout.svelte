@@ -33,12 +33,12 @@
       <div transition:fade id="container">
         <div id="content">
           {#key data.pathname}
-            <div
+            <section
               in:fade={{ easing: cubicIn, duration: 500, delay: 500 }}
               out:fade={{ easing: cubicOut, duration: 499 }}
             >
               <slot />
-            </div>
+            </section>
           {/key}
         </div>
       </div>
