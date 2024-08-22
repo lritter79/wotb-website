@@ -19,7 +19,7 @@
 
 {#if browser}
   <a id="gallery" class="section-anchor"> </a>
-  <div class="m:w-2/3 md:w-2/3 lg:w-2/3 xl:w-2/3 mx-auto">
+  <div class="mx-auto">
     <Carousel
       dots={true}
       pauseOnFocus={true}

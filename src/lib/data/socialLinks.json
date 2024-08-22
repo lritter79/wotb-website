@@ -1,22 +1,22 @@
 [
-    {
-        "id": 0,
-        "link": "https://www.facebook.com/wakeoftheblade/",
-        "linkText": "Facebook"
-    },
-    {
-        "id": 1,
-        "link": "https://www.instagram.com/wakeoftheblade",
-        "linkText": "Instagram"
-    },
-    {
-        "id": 2,
-        "link": "https://www.youtube.com/channel/UC1vTHVpgQf5pdEY6-rjPEDQ",
-        "linkText": "YouTube"
-    },
-    {
-        "id": 3,
-        "link": "https://www.tiktok.com/@wakeoftheblade",
-        "linkText": "TikTok"
-    }
+  {
+    "id": 0,
+    "link": "https://www.facebook.com/wakeoftheblade/",
+    "linkText": "Facebook"
+  },
+  {
+    "id": 1,
+    "link": "https://www.instagram.com/wakeoftheblade",
+    "linkText": "Instagram"
+  },
+  {
+    "id": 2,
+    "link": "https://www.youtube.com/channel/UC1vTHVpgQf5pdEY6-rjPEDQ",
+    "linkText": "YouTube"
+  },
+  {
+    "id": 3,
+    "link": "https://www.tiktok.com/@wakeoftheblade_",
+    "linkText": "TikTok"
+  }
 ]

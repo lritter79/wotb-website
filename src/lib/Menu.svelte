@@ -49,8 +49,8 @@
         </div>
       </div>
 
-      <div class="h-full ">
-        <SocialsGrid size="sm" />
+      <div class="h-full">
+        <SocialsGrid size="lg" />
       </div>
     </div>
   </div>

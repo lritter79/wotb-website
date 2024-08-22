@@ -2,9 +2,7 @@
   import Stack from "../lib/Stack.svelte";
   import Show from "../lib/Show/Show.svelte";
   import type { Show as ShowType } from "../lib/types/types";
-  import LinkBox from "./../lib/LinkBox.svelte";
-  import socials from "../lib/data/socialLinks.json";
-  import musicServices from "../lib/data/musicLink.json";
+
   import {
     faSpotify,
     type IconDefinition,

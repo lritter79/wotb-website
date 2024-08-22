@@ -57,7 +57,7 @@
           color="white"
           secondaryColor="#dc143ccc"
           style="stroke-width: 10; stroke: #dc143cb3;"
-          size="1.5x"
+          size="3.5x"
         />
       </div>
       <div class="link-text">{linkText}</div>
