@@ -59,7 +59,7 @@
     z-index: 10;
   }
   .section-anchor {
-    scroll-behavior: smooth !important;
+    scroll-behavior: smooth;
   }
 
   :global(.custom) {
