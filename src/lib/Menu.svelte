@@ -1,8 +1,8 @@
 <script lang="ts">
-  import { fly, scale, fade } from "svelte/transition";
+  import { scale, fade } from "svelte/transition";
   import { quadOut } from "svelte/easing";
-  import SocialsGrid from "./SocialsGrid.svelte";
   import Logo from "./Logo.svelte";
+  import SocialsMenuFooter from "./Socials/SocialsMenuFooter.svelte";
   export let open = false;
 </script>
 
@@ -49,8 +49,8 @@
         </div>
       </div>
 
-      <div class="h-full">
-        <SocialsGrid size="lg" />
+      <div class="h-full relative">
+        <SocialsMenuFooter isAbsolute={true} size="2.5x" />
       </div>
     </div>
   </div>
@@ -64,9 +64,6 @@
     position: fixed;
     top: 0;
     left: 0;
-    text-align: center;
-    font-size: 1.5em;
-    letter-spacing: 0.15em;
     padding-top: 0;
     color: #eef;
     height: 100vh;
@@ -74,13 +71,16 @@
   #link-container {
     display: flex;
     flex-direction: column;
+    text-align: center;
+    font-size: 1.5em;
+    letter-spacing: 0.15em;
   }
-  a {
+  #link-container > a {
     cursor: pointer;
     width: max-content;
     margin: 1rem auto;
   }
-  a:hover {
+  #link-container > a:hover {
     text-decoration: underline;
   }
 </style>

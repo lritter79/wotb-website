@@ -8,7 +8,7 @@
   import { cubicIn, cubicOut } from "svelte/easing";
   import Logo from "../lib/Logo.svelte";
   import { OnMount } from "fractils";
-  import SocialsGrid from "../lib/SocialsGrid.svelte";
+  import SocialsMenuFooter from "../lib/Socials/SocialsMenuFooter.svelte";
   export let data;
 </script>
 
@@ -31,7 +31,7 @@
   <OnMount>
     <div in:fade={{ duration: 1000 }}>
       <div transition:fade id="container">
-        <div class="content">
+        <div id="content">
           {#key data.pathname}
             <div
               in:fade={{ easing: cubicIn, duration: 500, delay: 500 }}
@@ -42,18 +42,14 @@
           {/key}
         </div>
       </div>
-      <div class="h-full">
-        <div class="relative">
-          <SocialsGrid size="lg" isAbsolute={false} />
-        </div>
-      </div>
+      <SocialsMenuFooter size="2.5x" isAbsolute={false} />
     </div>
   </OnMount>
 </main>
 
 <style>
-  main {
-    min-height: 100vh;
+  #content {
+    min-height: 54vh;
   }
 
   #hamburger-positioner {

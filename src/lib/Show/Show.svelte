@@ -24,16 +24,16 @@
   <div class="info-container text-left pr-2">
     <div class="flex items-center">
       {#if show.entryTime}
-        <h3 class="mr-2 text-sm md:text-base">
+        <h3 class="mr-2 text-base">
           {extractDateFromISO(show.entryTime)}
         </h3>
       {:else}
-        <h3 class="mr-2 text-sm md:text-base">
+        <h3 class="mr-2 text-base">
           {extractDateFromISO(show.startTime)}
         </h3>
       {/if}
       {#if show.address}
-        <h2 class="mr-2 text-sm md:text-base">
+        <h2 class="mr-2 text-base">
           {show.address.city}, {show.address.state}
         </h2>
         <a
